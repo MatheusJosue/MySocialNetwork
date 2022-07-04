@@ -1,0 +1,31 @@
+hr{
+  color: transparent;
+}
+
+.mc-card {
+  display:flex;
+  justify-content: center;
+  background-color: #00ae9c;
+  border-radius: 75px;
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: rgb(255, 255, 255);
+}
+
+.mc-ul-sidenav {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+}
+
+.mc-sublinks {
+  text-decoration: underline;
+  margin-bottom: 5px;
+  color:rgb(63, 63, 63);
+  font-size: 1.1rem;
+  font-weight: bold;
+}
+
+
+

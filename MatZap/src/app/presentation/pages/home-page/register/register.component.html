@@ -1,0 +1,54 @@
+<div class="row">
+  <div class="col-12 card-title mc-title">
+    Registrar
+  </div>
+  <div class="row card-body">
+    <div class="col-12">
+      <div class="row">
+        <div class="col-lg-9 col-sm-12">
+          <form [formGroup]="formUser">
+            <div class="input-group mb-3">
+              <span class="input-group-text" id="Username"><i class="bi bi-person-circle"></i></span>
+              <input type="text" class="form-control" placeholder="Username" formControlName="username" autocomplete="username">
+            </div>
+            <div class="input-group mb-3">
+              <span class="input-group-text" id="Email"><i class="bi bi-envelope-fill"></i></span>
+              <input type="text" class="form-control" placeholder="Email" type="email" formControlName="email" autocomplete="email">
+            </div>
+            <div class="input-group mb-3">
+              <span class="input-group-text" id="Password"><i class="bi bi-file-lock-fill"></i></span>
+              <input type="password" class="form-control" placeholder="Password" formControlName="password" autocomplete="new-password">
+            </div>
+            <div class="input-group mb-3">
+              <span class="input-group-text" id="ConfirmPassword"><i class="bi bi-file-lock-fill"></i></span>
+              <input type="password" class="form-control" placeholder="ConfirmPassword" formControlName="confirmPassword" autocomplete="new-password">
+            </div>
+          </form>
+          <div *ngIf="error && !error.errors" class="alert alert-danger mt-3 mb-0">{{error}}</div>
+          <div *ngIf="error && error.errors">
+            <div class="alert alert-danger mt-3 mb-0" *ngIf="error.errors.Email">
+              {{error.errors.Email}}
+            </div>
+            <div class="alert alert-danger mt-3 mb-0" *ngIf="error.errors.Username">
+              {{error.errors.Username}}
+            </div>
+            <div class="alert alert-danger mt-3 mb-0" *ngIf="error.errors.Password">
+              {{error.errors.Password}}
+            </div>
+            <div class="alert alert-danger mt-3 mb-0" *ngIf="error.errors.ConfirmPassword">
+              {{error.errors.ConfirmPassword}}
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3 d-none d-lg-block d-xl-block">
+          <img src="/assets/images/register.png" class="img-fluid">
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="card-footer mc-btn">
+    <button type="button" class="btn btn-primary mx-3" (click)="onSubmit()">Cadastrar</button>
+    <button type="button" class="btn btn-secondary mx-3" (click)="onCancel()">Cancelar</button>
+  </div>
+</div>
+

@@ -1,0 +1,56 @@
+<nav class="navbar navbar-expand-lg d-lg-none navbar-light" style="background-color: #ffffff;">
+  <div class="container-fluid d-flex justify-content-end">
+    <button class="navbar-toggler mb-3" type="button" (click)="isMenuCollapsed = !isMenuCollapsed">&#9776;</button>
+    <div [ngbCollapse]="isMenuCollapsed" class="collapse navbar-collapse">
+      <div class="row">
+        <div class="col-12">
+          <a class="btn mc-btn-nav" data-bs-toggle="collapse" href="#multiCollapseExample1" role="button" aria-expanded="false"aria-controls="multiCollapseExample1">
+            Perfil<i class="bi bi-person-circle ms-2"></i>
+          </a>
+          <div class="collapse multi-collapse" id="multiCollapseExample1">
+            <div class="card card-body mc-ul-sidenav">
+              <li><a class="mc-sublinks" [routerLink]="['profile']">Meu Perfil</a></li>
+              <li class="mc-sublinks"><a>Atualizar dados</a></li>
+              <li class="mc-sublinks"><a>Mudar Senha</a></li>
+              <li class="mc-sublinks"><a>Configurações</a></li>
+              <li class="mc-sublinks"><a>Ajuda e Suporte</a></li>
+            </div>
+          </div>
+        </div>
+      </div>
+      <hr>
+      <div class="row">
+        <div class="col-12">
+          <a class="btn mc-btn-nav" type="button" data-bs-toggle="collapse" data-bs-target="#multiCollapseExample2" aria-expanded="false"aria-controls="multiCollapseExample2">
+            Posts<i class="bi bi-card-list ms-2"></i>
+          </a>
+          <div class="collapse multi-collapse" id="multiCollapseExample2">
+            <div class="card card-body mc-ul-sidenav">
+              <li><a class="mc-sublinks" [routerLink]="['createpost']">Criar um Post</a></li>
+              <li><a class="mc-sublinks" [routerLink]="['listposts']">Listar todos Posts</a></li>
+              <li><a class="mc-sublinks" [routerLink]="['listmyposts']">Listar meus Posts</a></li>
+            </div>
+          </div>
+        </div>
+      </div>
+      <hr>
+      <div class="row">
+        <div class="col-12">
+          <a class="btn mc-btn-nav" type="button" data-bs-toggle="collapse" data-bs-target="#multiCollapseExample3" aria-expanded="false" aria-controls="multiCollapseExample3">
+            Messages<i class="bi bi-chat-dots ms-2"></i>
+          </a>
+          <div class="collapse multi-collapse" id="multiCollapseExample3">
+            <div class="card card-body mc-ul-sidenav">
+              <li><a [routerLink]="['addfriend']" class="mc-sublinks">Adicionar Amigo</a></li>
+              <li><a [routerLink]="['requestpendents']" class="mc-sublinks">Pedidos de Amizade</a></li>
+              <li><a [routerLink]="['listfriends']" class="mc-sublinks">Lista De Amigos</a></li>
+              <li><a [routerLink]="['messagessent']" class="mc-sublinks">Mensagens Enviadas</a></li>
+              <li><a [routerLink]="['receivedmessages']" class="mc-sublinks">Mensagens Recebidas</a></li>
+              <li><a [routerLink]="['chatlist']" class="mc-sublinks">Lista de Chats</a></li>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</nav>

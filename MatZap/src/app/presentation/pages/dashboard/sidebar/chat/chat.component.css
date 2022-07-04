@@ -1,0 +1,134 @@
+hr {
+  color: transparent;
+}
+
+.mc-card {
+  margin-top: 4%;
+  border-radius: 10px;
+  box-shadow: 0px 5px 30px 10px rgb(0, 0, 0);
+
+}
+
+@media screen and (min-width: 450px) {
+  .mc-card {
+    width: 50vh;
+    }
+
+  .size {
+    height: 70%;
+  }
+}
+
+@media screen and (min-width: 650px) {
+  .mc-card {
+    width: 65vh;
+    }
+
+  .size {
+    height: 70%;
+  }
+}
+
+@media screen and (min-width: 800px) {
+  .mc-card {
+    width: 60vh;
+    }
+
+  .size {
+    height: 70%;
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  .mc-card {
+    width: 70vh;
+    }
+
+    .size {
+      height: 75%;
+    }
+}
+
+@media screen and (min-width: 1300px) {
+  .mc-card {
+    width: 90vh;
+    }
+
+    .size {
+      height: 75%;
+    }
+}
+
+
+.mc-title {
+  text-align: center;
+  text-transform: uppercase;
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+.mc-bg-chat {
+  background: url('/assets/images/bgwpp.jpg');
+  border-radius: 10px;
+  height: 60vh;
+  overflow-y:scroll;
+}
+
+.mc-card-image-people {
+  display: flex;
+  justify-content: center;
+  margin-top: 1%;
+  margin-bottom: 1%;
+}
+
+.mc-itens-on-card-people {
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  border-radius: 15px;
+  color: black;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+}
+
+.mc-img {
+  width: 40px;
+  height: 40px;
+}
+
+.mc-chat-items {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1%;
+}
+
+.mc-me {
+  align-self: flex-start;
+  flex-direction: column;
+  background-color: #defece;
+  text-align: start;
+}
+
+.mc-other-people {
+  align-self: flex-end;
+  flex-direction: column;
+  background-color: #e5ddd5;
+  text-align: end;
+}
+
+.mc-img-chat {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.mc-footer {
+  display: flex;
+  flex-direction:row;
+}
+
+.mc-icon-chat {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

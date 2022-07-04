@@ -1,0 +1,65 @@
+<div class="bg-white">
+
+  <div class="row">
+    <div class="col-12 mc-card">
+      <img src="https://therichpost.com/wp-content/uploads/2020/06/avatar2.png" alt="..." width="65" class="rounded-circle img-thumbnail"/>
+    </div>
+  </div>
+
+  <hr>
+
+  <div class="row" (click)="collapse1.toggle()" [attr.aria-expanded]="!isCollapsed1"aria-controls="collapseExample">
+    <div class="col-12 mc-card">Perfil <i class="bi bi-person-circle ms-2"></i></div>
+  </div>
+
+  <div class="row">
+    <div class="col-12 card" #collapse1="ngbCollapse" [(ngbCollapse)]="isCollapsed1">
+      <div class="card-body mc-ul-sidenav">
+        <li><a class="mc-sublinks" [routerLink]="['profile']">Meu Perfil</a></li>
+        <li><a class="mc-sublinks">Atualizar dados</a></li>
+        <li><a class="mc-sublinks">Mudar Senha</a></li>
+        <li><a class="mc-sublinks">Configurações</a></li>
+        <li><a class="mc-sublinks">Ajuda e Suporte</a></li>
+      </div>
+    </div>
+  </div>
+
+  <hr>
+
+  <div class="row" (click)="collapse2.toggle()" [attr.aria-expanded]="!isCollapsed2"aria-controls="collapseExample">
+    <div class="col-12 mc-card">Posts <i class="bi bi-card-list ms-2"></i></div>
+  </div>
+
+  <div class="row">
+    <div class="col-12 card" #collapse2="ngbCollapse" [(ngbCollapse)]="isCollapsed2">
+      <div class="card-body mc-ul-sidenav">
+        <li><a class="mc-sublinks" [routerLink]="['createpost']">Criar um Post</a></li>
+        <li><a class="mc-sublinks" [routerLink]="['listposts']">Listar todos Posts</a></li>
+        <li><a class="mc-sublinks" [routerLink]="['listmyposts']">Listar meus Posts</a></li>
+      </div>
+    </div>
+  </div>
+
+  <hr>
+
+  <div class="row" (click)="collapse3.toggle()" [attr.aria-expanded]="!isCollapsed3"aria-controls="collapseExample">
+    <div class="col-12 mc-card">Mensagens <i class="bi bi-chat-dots ms-2"></i></div>
+  </div>
+
+  <div class="row">
+    <div class="col-12 card" #collapse3="ngbCollapse" [(ngbCollapse)]="isCollapsed3">
+      <div class="card-body mc-ul-sidenav">
+
+        <li><a [routerLink]="['addfriend']" class="mc-sublinks">Adicionar Amigo</a></li>
+        <li><a [routerLink]="['requestpendents']" class="mc-sublinks">Pedidos de Amizade</a></li>
+        <li><a [routerLink]="['listfriends']" class="mc-sublinks">Lista De Amigos</a></li>
+        <li><a [routerLink]="['messagessent']" class="mc-sublinks">Mensagens Enviadas</a></li>
+        <li><a [routerLink]="['receivedmessages']" class="mc-sublinks">Mensagens Recebidas</a></li>
+        <li><a [routerLink]="['chatlist']" class="mc-sublinks">Lista de Chats</a></li>
+      </div>
+    </div>
+  </div>
+
+  <hr>
+
+</div>

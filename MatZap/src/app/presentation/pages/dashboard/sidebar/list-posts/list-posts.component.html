@@ -1,0 +1,61 @@
+<div class="row">
+  <div class="col-12 card mc-card mc-overflow">
+      <table class="table table-striped table-responsive">
+        <thead class="thead-dark">
+          <tr class="mc-data-table">
+            <th scope="col">Id</th>
+            <th scope="col">Titulo</th>
+            <th scope="col">Descricao</th>
+            <th scope="col">Data</th>
+            <th scope="col">Likes</th>
+            <th scope="col">Username</th>
+            <th scope="col">Delete</th>
+            <th scope="col">Update</th>
+            <th scope="col">Create Like</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let post of posts" class="mc-data-table">
+            <td >{{post.id}}</td>
+            <td >{{post.titulo}}</td>
+            <td >{{post.descricao}}</td>
+            <td >{{post.data | localDateTime}}</td>
+            <td >{{post.likes}}</td>
+            <td >{{post.applicationUsername}}</td>
+            <td class="delete">
+              <button class="btn" *ngIf="post.applicationUserId == currentUser.id" (click)="open(content, post.id)"><i class="bi bi-trash3-fill" style="color: rgb(255, 0, 0)"></i></button>
+              <button class="btn" *ngIf="post.applicationUserId != currentUser.id" (click)="cancel()"><i class="bi bi-trash3-fill" style="color: rgb(154, 154, 154)"></i></button>
+            </td>
+            <td class="update">
+              <button class="btn" *ngIf="post.applicationUserId == currentUser.id" (click)="updatePost(post.id)"><i class="bi bi-pen-fill" style="color: rgb(0, 0, 0)"></i>
+              </button>
+              <button class="btn" *ngIf="post.applicationUserId != currentUser.id" (click)="cancel()"><i class="bi bi-pen-fill" style="color: rgb(154, 154, 154)"></i></button>
+            </td>
+            <td class="like">
+              <button class="btn" *ngIf="post.alreadyLiked == true && post.applicationUserId != currentUser.id" (click)="removeLike(post.id)"><i class="bi bi-hand-thumbs-up-fill" style="color: rgb(8, 0, 255)"></i></button>
+              <button class="btn" *ngIf="post.alreadyLiked == false && post.applicationUserId != currentUser.id" (click)="createLike(post.id)"><i class="bi bi-hand-thumbs-up-fill" style="color: rgb(0, 0, 0)"></i></button>
+              <button class="btn" *ngIf="post.applicationUserId == currentUser.id"><i class="bi bi-hand-thumbs-up-fill" style="color: rgb(154, 154, 154)"></i></button>
+              <ng-template #content let-c="close" let-d="dismiss">
+                <div class="modal-header">
+                  <h4 class="modal-title" id="modal-basic-title">Deletar Post</h4>
+                  <button type="button" class="btn-close" aria-label="Close" (click)="d('Cross click')"></button>
+                </div>
+                <div class="modal-body">
+                  <p>Deseja excluir esta postagem?</p>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-outline-dark" (click)="deletePost()">Deletar</button>
+                  <button type="button" class="btn btn-outline-dark" (click)="d()">Cancelar</button>
+                </div>
+              </ng-template>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+  </div>
+</div>
+
+
+
+
+

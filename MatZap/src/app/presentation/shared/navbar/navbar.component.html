@@ -1,0 +1,17 @@
+<nav class="navbar navbar-expand-lg navbar-light" style="background-color: #00ae9c;">
+
+  <div class="container-fluid">
+    <a class="navbar-brand mc-logo">MatZap</a>
+    <button class="navbar-toggler mb-2" type="button" (click)="isMenuCollapsed = !isMenuCollapsed">&#9776;</button>
+    <div [ngbCollapse]="isMenuCollapsed" class="collapse navbar-collapse mc-links-nav">
+
+      <ul class="navbar-nav">
+        <li class="nav-item active">
+          <a class="btn btn-light" (click)="onLogout()">Sair<i class="bi bi-door-open-fill"></i></a>
+        </li>
+      </ul>
+
+    </div>
+  </div>
+
+</nav>

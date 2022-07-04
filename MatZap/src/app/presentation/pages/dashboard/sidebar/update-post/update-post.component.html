@@ -1,0 +1,23 @@
+<div class="row">
+  <div class="col-12 mc-card card-title mc-title">Atualizar o Post
+    <div class="row card-body">
+      <div class="col-12">
+        <form [formGroup]="formUp">
+          <div class="input-group mb-3">
+            <span class="input-group-text" id="Titulo"><i class="bi bi-card-list"></i></span>
+            <input type="text" class="form-control" placeholder="Titulo" formControlName="titulo" autocomplete="titulo">
+          </div>
+          <div class="input-group mb-3">
+            <span class="input-group-text" id="Descricao"><i class="bi bi-window-dock"></i></span>
+            <input type="text" class="form-control" placeholder="Descricao" type="descricao" formControlName="descricao" autocomplete="descricao">
+          </div>
+        </form>
+      </div>
+      <div class="card-footer mc-btn">
+        <button type="button" class="btn btn-primary mx-3" (click)="onSubmit()">Atualizar</button>
+        <button type="button" class="btn btn-secondary mx-3" (click)="onCancel()">Cancelar</button>
+      </div>
+    </div>
+  </div>
+</div>
+

@@ -1,0 +1,25 @@
+<div class="row">
+  <div class="col-12 mc-card">
+    <div class="card-title mc-title">
+      Adicionar novo Amigo
+    </div>
+    <div class="row card-body">
+      <div class="col-lg-8">
+        <form [formGroup]="formFriend">
+          <div class="input-group mc-input">
+            <span class="input-group-text" id="username"><i class="bi bi-window-dock"></i></span>
+            <input type="text" class="form-control" placeholder="Username" type="username" formControlName="username" autocomplete="Username">
+          </div>
+        </form>
+      </div>
+      <div class="col-4 d-none d-lg-block d-xl-block" style="display:flex; justify-content: center;">
+        <img src="/assets/images/addfriend.png" class="img-fluid ">
+      </div>
+    </div>
+    <div class="card-footer mc-btn">
+      <button type="button" class="btn btn-primary mx-3" (click)="onSubmit()">Adicionar</button>
+      <button type="button" class="btn btn-secondary mx-3" (click)="onCancel()">Cancelar</button>
+    </div>
+  </div>
+</div>
+

@@ -1,0 +1,29 @@
+<div class="row">
+  <div class="col-12 mc-card">
+    <div class="card-title mc-title">
+      Adicionar novo Post
+    </div>
+    <div class="row card-body">
+      <div class="col-lg-8 col-sm-12">
+        <form [formGroup]="form">
+          <div class="input-group mc-input">
+            <span class="input-group-text" id="Titulo"><i class="bi bi-card-list"></i></span>
+            <input type="text" class="form-control" placeholder="Titulo" formControlName="titulo" autocomplete="titulo">
+          </div>
+          <div class="input-group mc-input">
+            <span class="input-group-text" id="Descricao"><i class="bi bi-window-dock"></i></span>
+            <input type="text" class="form-control" placeholder="Descricao" type="descricao" formControlName="descricao" autocomplete="descricao">
+          </div>
+        </form>
+      </div>
+      <div class="col-lg-4 d-none d-lg-block d-xl-block" style="display: flex; align-items: center;">
+        <img src="/assets/images/post1.png" class="img-fluid w-50" >
+      </div>
+      <div class="card-footer mc-btn">
+        <button type="button" class="btn btn-primary mx-3" (click)="onSubmit()">Criar</button>
+        <button type="button" class="btn btn-secondary mx-3" (click)="onCancel()">Cancelar</button>
+      </div>
+    </div>
+  </div>
+</div>
+

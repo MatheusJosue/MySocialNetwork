@@ -1,0 +1,30 @@
+<div class="row">
+  <div class="col-12 card-title mc-title">Entrar
+    <div class="row card-body">
+      <div class="col-12">
+        <div class="row">
+          <div class="col-lg-10 col-sm-12">
+            <form [formGroup]="form">
+              <div class="input-group mc-input">
+                <span class="input-group-text" id="Username"><i class="bi bi-person-circle"></i></span>
+                <input type="text" class="form-control" placeholder="Username" formControlName="username" autocomplete="username">
+              </div>
+              <div class="input-group">
+                <span class="input-group-text" id="Password"><i class="bi bi-file-lock-fill"></i></span>
+                <input type="password" class="form-control" placeholder="Password" formControlName="password" autocomplete="password">
+              </div>
+            </form>
+            <div *ngIf="error" class="alert alert-danger mt-3 mb-0">{{error}}</div>
+          </div>
+          <div class="col-lg-2 d-none d-lg-block d-xl-block mc-img">
+            <img src="/assets/images/login.png" class=" img-fluid">
+          </div>
+        </div>
+        <div class="card-footer mc-btn">
+          <button type="button" class="btn btn-primary mx-2" (click)="onSubmit()">Entrar</button>
+          <button type="button" class="btn btn-secondary" (click)="onCancel()">Cancelar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

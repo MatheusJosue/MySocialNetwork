@@ -1,0 +1,22 @@
+.mc-align-link-nav {
+  align-items: flex-end;
+}
+
+.mc-links-nav {
+  display: flex;
+  justify-content:flex-end;
+}
+
+.mc-logo{
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+  list-style: none;
+}
+
+.mc-logo:hover{
+  color: rgb(0, 0, 0);
+  font-size: 1.5rem;
+  text-decoration: underline;
+}

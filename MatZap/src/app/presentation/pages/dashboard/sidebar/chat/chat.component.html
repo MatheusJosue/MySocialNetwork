@@ -1,0 +1,41 @@
+<div class="container width-container" >
+  <div class="card mc-card">
+    <div class="card-title mc-title">
+      Mensagens no chat
+    </div>
+      <div class="row card-body">
+        <div class="col-12 mc-bg-chat">
+          <div class="row mc-card-image-people">
+            <div class="col-5 card mc-itens-on-card-people">
+              <img src="/assets/images/user2.png" class="mc-img img-fluid rounded-circle" >
+              <span class="ms-3">{{currentFriendUsername}}</span>
+            </div>
+          </div>
+          <div class="row" *ngIf="messages">
+            <div class="col-12 mc-chat-items" *ngFor="let message of messages">
+              <div class="card mc-me" *ngIf="message.senderUserId == currentUser.id">
+                <div class="row">
+                  <p>{{message.texto}}<br><span>{{message.data | localDateTime}}</span></p>
+                </div>
+              </div>
+              <div class="card mc-other-people" *ngIf="message.receiverUserId == currentUser.id">
+                <div class="row">
+                  <p>{{message.texto}}<br><span>{{message.data | localDateTime}}</span></p>
+                </div>
+              </div>
+            </div>
+          </div>
+      </div>
+    </div>
+    <div class="card-footer">
+      <div class="row mc-footer">
+        <div class="col-1 mc-icon-chat">
+          <i class="bi bi-emoji-smile w-25"></i>
+        </div>
+        <form [formGroup]="formMsg" class="col-11">
+          <input (keydown.enter)="onSubmit()" type="text" class="form-control" placeholder="Digite aqui sua mensagem" type="texto" formControlName="texto" autocomplete="texto">
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
